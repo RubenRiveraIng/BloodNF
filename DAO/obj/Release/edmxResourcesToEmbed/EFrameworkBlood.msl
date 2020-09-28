@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bloodbog_bdModelStoreContainer" CdmEntityContainer="bloodbog_bdEntities">
+    <EntitySetMapping Name="Campanas_Donacion">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Campanas_Donacion">
+        <MappingFragment StoreEntitySet="Campanas_Donacion">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono_2" ColumnName="Telefono_2" />
+          <ScalarProperty Name="Telefono_1" ColumnName="Telefono_1" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="LTD" ColumnName="LTD" />
+          <ScalarProperty Name="LNG" ColumnName="LNG" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdCampanas_Donacion" ColumnName="IdCampanas_Donacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Documento">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Tipo_Documento">
+        <MappingFragment StoreEntitySet="Tipo_Documento">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Agendamiento_Campana">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Agendamiento_Campana">
+        <MappingFragment StoreEntitySet="Agendamiento_Campana">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdCampana_Donacion" ColumnName="IdCampana_Donacion" />
+          <ScalarProperty Name="Fecha_Asistencia" ColumnName="Fecha_Asistencia" />
+          <ScalarProperty Name="IdAgendamiento" ColumnName="IdAgendamiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banner">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Banner">
+        <MappingFragment StoreEntitySet="Banner">
+          <ScalarProperty Name="Fecha_Hasta" ColumnName="Fecha_Hasta" />
+          <ScalarProperty Name="Fecha_Subida" ColumnName="Fecha_Subida" />
+          <ScalarProperty Name="IdUsuario_Sube" ColumnName="IdUsuario_Sube" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Url_Imagen" ColumnName="Url_Imagen" />
+          <ScalarProperty Name="IdBanner" ColumnName="IdBanner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clinicas_Bancos_Sangre">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Clinicas_Bancos_Sangre">
+        <MappingFragment StoreEntitySet="Clinicas_Bancos_Sangre">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Telefono_3" ColumnName="Telefono_3" />
+          <ScalarProperty Name="Telefono_2" ColumnName="Telefono_2" />
+          <ScalarProperty Name="Telefono_1" ColumnName="Telefono_1" />
+          <ScalarProperty Name="LTD" ColumnName="LTD" />
+          <ScalarProperty Name="LNG" ColumnName="LNG" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Idclinicas_Bancos_Sangre" ColumnName="Idclinicas_Bancos_Sangre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado_Solicitud">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Estado_Solicitud">
+        <MappingFragment StoreEntitySet="Estado_Solicitud">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEstado_Solicitud" ColumnName="IdEstado_Solicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lineas_Atencion">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Lineas_Atencion">
+        <MappingFragment StoreEntitySet="Lineas_Atencion">
+          <ScalarProperty Name="Telefono_5" ColumnName="Telefono_5" />
+          <ScalarProperty Name="Telefono_4" ColumnName="Telefono_4" />
+          <ScalarProperty Name="Telefono_3" ColumnName="Telefono_3" />
+          <ScalarProperty Name="Telefono_2" ColumnName="Telefono_2" />
+          <ScalarProperty Name="Telefono_1" ColumnName="Telefono_1" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdLineas_Atencion" ColumnName="IdLineas_Atencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="urlRedirect" ColumnName="urlRedirect" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu_Rol">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Menu_Rol">
+        <MappingFragment StoreEntitySet="Menu_Rol">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdMenu_Rol" ColumnName="IdMenu_Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Recoleccion">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Solicitud_Recoleccion">
+        <MappingFragment StoreEntitySet="Solicitud_Recoleccion">
+          <ScalarProperty Name="Fecha_Recoleccion" ColumnName="Fecha_Recoleccion" />
+          <ScalarProperty Name="IdUsuario_Recolecta" ColumnName="IdUsuario_Recolecta" />
+          <ScalarProperty Name="IdUsuario_Solicita" ColumnName="IdUsuario_Solicita" />
+          <ScalarProperty Name="IdEstado_Solicitud" ColumnName="IdEstado_Solicitud" />
+          <ScalarProperty Name="LTD_Donde" ColumnName="LTD_Donde" />
+          <ScalarProperty Name="LGN_Donde" ColumnName="LGN_Donde" />
+          <ScalarProperty Name="Direccion_Donde" ColumnName="Direccion_Donde" />
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Sangre">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Tipo_Sangre">
+        <MappingFragment StoreEntitySet="Tipo_Sangre">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdTipoSangre" ColumnName="IdTipoSangre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="bloodbog_bdModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdTipoSangre" ColumnName="IdTipoSangre" />
+          <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
+          <ScalarProperty Name="HashContrasena" ColumnName="HashContrasena" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

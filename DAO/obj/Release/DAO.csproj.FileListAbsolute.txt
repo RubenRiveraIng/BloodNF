@@ -1,0 +1,14 @@
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\DAO.dll.config
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\DAO.dll
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\DAO.pdb
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\EntityFramework.dll
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\Model.dll
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\Newtonsoft.Json.dll
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\Model.pdb
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\EntityFramework.xml
+C:\Users\dcontreh\Desktop\DAO\DAO\bin\Release\Newtonsoft.Json.xml
+C:\Users\dcontreh\Desktop\DAO\DAO\obj\Release\DAO.csprojAssemblyReference.cache
+C:\Users\dcontreh\Desktop\DAO\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+C:\Users\dcontreh\Desktop\DAO\DAO\obj\Release\DAO.csproj.CopyComplete
+C:\Users\dcontreh\Desktop\DAO\DAO\obj\Release\DAO.dll
+C:\Users\dcontreh\Desktop\DAO\DAO\obj\Release\DAO.pdb

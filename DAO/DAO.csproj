@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F845D74-02A4-4EBD-A35E-61C66A12B218}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAO</RootNamespace>
+    <AssemblyName>DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agendamiento_Campana.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Banner.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BannerOp\BannerOperations.cs" />
+    <Compile Include="BannerOp\IBannerOperations.cs" />
+    <Compile Include="CampanasDonacionOp\CampanasDonacionOperations.cs" />
+    <Compile Include="CampanasDonacionOp\ICampanasDonacionOperations.cs" />
+    <Compile Include="Campanas_Donacion.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicasBancosSangreOp\ClinicasBancosSangreOperations.cs" />
+    <Compile Include="ClinicasBancosSangreOp\IClinicasBancosSangreOperations.cs" />
+    <Compile Include="Clinicas_Bancos_Sangre.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFrameworkBlood.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFrameworkBlood.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFrameworkBlood.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFrameworkBlood.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFrameworkBlood.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoSolicitudOp\EstadoSolicitudOperations.cs" />
+    <Compile Include="EstadoSolicitudOp\IEstadoSolicitudOperations.cs" />
+    <Compile Include="Estado_Solicitud.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LineasAtencionOp\ILineasAtencionOperations.cs" />
+    <Compile Include="LineasAtencionOp\LineasAtencionOperations.cs" />
+    <Compile Include="Lineas_Atencion.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuOp\IMenuOperations.cs" />
+    <Compile Include="MenuOp\MenuOperations.cs" />
+    <Compile Include="Menu_Rol.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rol.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudRecoleccionOp\ISolicitudRecoleccionOperations.cs" />
+    <Compile Include="SolicitudRecoleccionOp\SolicitudRecoleccionOperations.cs" />
+    <Compile Include="Solicitud_Recoleccion.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoDocumentoOp\ITipoDocumentoOperations.cs" />
+    <Compile Include="TipoDocumentoOp\TipoDocumentoOperations.cs" />
+    <Compile Include="TipoSangreOp\ITipoSangreOperations.cs" />
+    <Compile Include="TipoSangreOp\TipoSangreOperations.cs" />
+    <Compile Include="Tipo_Documento.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Sangre.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>EFrameworkBlood.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioOp\IUsuarioOperations.cs" />
+    <Compile Include="UsuarioOp\UsuarioOperations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AgendamientoCampana\" />
+    <Folder Include="Menu_Rol\" />
+    <Folder Include="Rol\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EFrameworkBlood.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFrameworkBlood.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EFrameworkBlood.edmx.diagram">
+      <DependentUpon>EFrameworkBlood.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EFrameworkBlood.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFrameworkBlood.Context.cs</LastGenOutput>
+      <DependentUpon>EFrameworkBlood.edmx</DependentUpon>
+    </Content>
+    <Content Include="EFrameworkBlood.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFrameworkBlood.edmx</DependentUpon>
+      <LastGenOutput>EFrameworkBlood.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{c407b951-30fd-44e5-93d2-77924313d61a}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

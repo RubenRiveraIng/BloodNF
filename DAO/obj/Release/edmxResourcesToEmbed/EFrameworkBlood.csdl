@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bloodbog_bdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bloodbog_bdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Campanas_Donacion" EntityType="bloodbog_bdModel.Campanas_Donacion" />
+    <EntitySet Name="Tipo_Documento" EntityType="bloodbog_bdModel.Tipo_Documento" />
+    <EntitySet Name="Agendamiento_Campana" EntityType="bloodbog_bdModel.Agendamiento_Campana" />
+    <EntitySet Name="Banner" EntityType="bloodbog_bdModel.Banner" />
+    <EntitySet Name="Clinicas_Bancos_Sangre" EntityType="bloodbog_bdModel.Clinicas_Bancos_Sangre" />
+    <EntitySet Name="Estado_Solicitud" EntityType="bloodbog_bdModel.Estado_Solicitud" />
+    <EntitySet Name="Lineas_Atencion" EntityType="bloodbog_bdModel.Lineas_Atencion" />
+    <EntitySet Name="Menu" EntityType="bloodbog_bdModel.Menu" />
+    <EntitySet Name="Menu_Rol" EntityType="bloodbog_bdModel.Menu_Rol" />
+    <EntitySet Name="Rol" EntityType="bloodbog_bdModel.Rol" />
+    <EntitySet Name="Solicitud_Recoleccion" EntityType="bloodbog_bdModel.Solicitud_Recoleccion" />
+    <EntitySet Name="Tipo_Sangre" EntityType="bloodbog_bdModel.Tipo_Sangre" />
+    <EntitySet Name="Usuario" EntityType="bloodbog_bdModel.Usuario" />
+    <AssociationSet Name="FK__Agendamie__IdCam__5BE2A6F2" Association="bloodbog_bdModel.FK__Agendamie__IdCam__5BE2A6F2">
+      <End Role="Campanas_Donacion" EntitySet="Campanas_Donacion" />
+      <End Role="Agendamiento_Campana" EntitySet="Agendamiento_Campana" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Agendamie__IdUsu__5CD6CB2B" Association="bloodbog_bdModel.FK__Agendamie__IdUsu__5CD6CB2B">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Agendamiento_Campana" EntitySet="Agendamiento_Campana" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banner__IdUsuari__60A75C0F" Association="bloodbog_bdModel.FK__Banner__IdUsuari__60A75C0F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Banner" EntitySet="Banner" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Campañas___IdUsu__5812160E" Association="bloodbog_bdModel.FK__Campañas___IdUsu__5812160E">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Campanas_Donacion" EntitySet="Campanas_Donacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clinicas___IdUsu__48CFD27E" Association="bloodbog_bdModel.FK__Clinicas___IdUsu__48CFD27E">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Clinicas_Bancos_Sangre" EntitySet="Clinicas_Bancos_Sangre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clinicas___IdUsu__4CA06362" Association="bloodbog_bdModel.FK__Clinicas___IdUsu__4CA06362">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Clinicas_Bancos_Sangre" EntitySet="Clinicas_Bancos_Sangre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Estado_So__IdEst__5070F446" Association="bloodbog_bdModel.FK__Estado_So__IdEst__5070F446">
+      <End Role="Estado_Solicitud" EntitySet="Estado_Solicitud" />
+      <End Role="Estado_Solicitud1" EntitySet="Estado_Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__IdEst__5165187F" Association="bloodbog_bdModel.FK__Solicitud__IdEst__5165187F">
+      <End Role="Estado_Solicitud" EntitySet="Estado_Solicitud" />
+      <End Role="Solicitud_Recoleccion" EntitySet="Solicitud_Recoleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menu_Rol__IdMenu__440B1D61" Association="bloodbog_bdModel.FK__Menu_Rol__IdMenu__440B1D61">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Menu_Rol" EntitySet="Menu_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menu_Rol__IdRol__4316F928" Association="bloodbog_bdModel.FK__Menu_Rol__IdRol__4316F928">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Menu_Rol" EntitySet="Menu_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdRol__6E01572D" Association="bloodbog_bdModel.FK__Usuario__IdRol__6E01572D">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__IdUsu__52593CB8" Association="bloodbog_bdModel.FK__Solicitud__IdUsu__52593CB8">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Solicitud_Recoleccion" EntitySet="Solicitud_Recoleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__IdUsu__534D60F1" Association="bloodbog_bdModel.FK__Solicitud__IdUsu__534D60F1">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Solicitud_Recoleccion" EntitySet="Solicitud_Recoleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdTipoD__3A81B327" Association="bloodbog_bdModel.FK__Usuario__IdTipoD__3A81B327">
+      <End Role="Tipo_Documento" EntitySet="Tipo_Documento" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdTipoS__3B75D760" Association="bloodbog_bdModel.FK__Usuario__IdTipoS__3B75D760">
+      <End Role="Tipo_Sangre" EntitySet="Tipo_Sangre" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Campanas_Donacion">
+    <Key>
+      <PropertyRef Name="IdCampanas_Donacion" />
+    </Key>
+    <Property Name="IdCampanas_Donacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LNG" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LTD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Inicio" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Fin" Type="DateTime" Precision="0" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Telefono_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Agendamiento_Campana" Relationship="bloodbog_bdModel.FK__Agendamie__IdCam__5BE2A6F2" FromRole="Campanas_Donacion" ToRole="Agendamiento_Campana" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Campañas___IdUsu__5812160E" FromRole="Campanas_Donacion" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Tipo_Documento">
+    <Key>
+      <PropertyRef Name="IdTipoDocumento" />
+    </Key>
+    <Property Name="IdTipoDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Usuario__IdTipoD__3A81B327" FromRole="Tipo_Documento" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Agendamiento_Campana">
+    <Key>
+      <PropertyRef Name="IdAgendamiento" />
+    </Key>
+    <Property Name="IdAgendamiento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha_Asistencia" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdCampana_Donacion" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Campanas_Donacion" Relationship="bloodbog_bdModel.FK__Agendamie__IdCam__5BE2A6F2" FromRole="Agendamiento_Campana" ToRole="Campanas_Donacion" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Agendamie__IdUsu__5CD6CB2B" FromRole="Agendamiento_Campana" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="IdBanner" />
+    </Key>
+    <Property Name="IdBanner" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url_Imagen" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdUsuario_Sube" Type="Int32" Nullable="false" />
+    <Property Name="Fecha_Subida" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Fecha_Hasta" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Banner__IdUsuari__60A75C0F" FromRole="Banner" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Clinicas_Bancos_Sangre">
+    <Key>
+      <PropertyRef Name="Idclinicas_Bancos_Sangre" />
+    </Key>
+    <Property Name="Idclinicas_Bancos_Sangre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LNG" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LTD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Clinicas___IdUsu__48CFD27E" FromRole="Clinicas_Bancos_Sangre" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="bloodbog_bdModel.FK__Clinicas___IdUsu__4CA06362" FromRole="Clinicas_Bancos_Sangre" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Estado_Solicitud">
+    <Key>
+      <PropertyRef Name="IdEstado_Solicitud" />
+    </Key>
+    <Property Name="IdEstado_Solicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estado_Solicitud1" Relationship="bloodbog_bdModel.FK__Estado_So__IdEst__5070F446" FromRole="Estado_Solicitud" ToRole="Estado_Solicitud1" />
+    <NavigationProperty Name="Estado_Solicitud2" Relationship="bloodbog_bdModel.FK__Estado_So__IdEst__5070F446" FromRole="Estado_Solicitud1" ToRole="Estado_Solicitud" />
+    <NavigationProperty Name="Solicitud_Recoleccion" Relationship="bloodbog_bdModel.FK__Solicitud__IdEst__5165187F" FromRole="Estado_Solicitud" ToRole="Solicitud_Recoleccion" />
+  </EntityType>
+  <EntityType Name="Lineas_Atencion">
+    <Key>
+      <PropertyRef Name="IdLineas_Atencion" />
+    </Key>
+    <Property Name="IdLineas_Atencion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_4" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_5" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Icono" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="urlRedirect" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Menu_Rol" Relationship="bloodbog_bdModel.FK__Menu_Rol__IdMenu__440B1D61" FromRole="Menu" ToRole="Menu_Rol" />
+  </EntityType>
+  <EntityType Name="Menu_Rol">
+    <Key>
+      <PropertyRef Name="IdMenu_Rol" />
+    </Key>
+    <Property Name="IdMenu_Rol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRol" Type="Int32" Nullable="false" />
+    <Property Name="IdMenu" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="bloodbog_bdModel.FK__Menu_Rol__IdMenu__440B1D61" FromRole="Menu_Rol" ToRole="Menu" />
+    <NavigationProperty Name="Rol" Relationship="bloodbog_bdModel.FK__Menu_Rol__IdRol__4316F928" FromRole="Menu_Rol" ToRole="Rol" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Menu_Rol" Relationship="bloodbog_bdModel.FK__Menu_Rol__IdRol__4316F928" FromRole="Rol" ToRole="Menu_Rol" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Usuario__IdRol__6E01572D" FromRole="Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Solicitud_Recoleccion">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Direccion_Donde" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LGN_Donde" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LTD_Donde" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdEstado_Solicitud" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario_Solicita" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario_Recolecta" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Solicitud" Relationship="bloodbog_bdModel.FK__Solicitud__IdEst__5165187F" FromRole="Solicitud_Recoleccion" ToRole="Estado_Solicitud" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Solicitud__IdUsu__52593CB8" FromRole="Solicitud_Recoleccion" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="bloodbog_bdModel.FK__Solicitud__IdUsu__534D60F1" FromRole="Solicitud_Recoleccion" ToRole="Usuario" />
+    <Property Name="Fecha_Recoleccion" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tipo_Sangre">
+    <Key>
+      <PropertyRef Name="IdTipoSangre" />
+    </Key>
+    <Property Name="IdTipoSangre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="bloodbog_bdModel.FK__Usuario__IdTipoS__3B75D760" FromRole="Tipo_Sangre" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PrimerApellido" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SegundoApellido" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CorreoElectronico" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Peso" Type="Int32" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NumeroDocumento" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="HashContrasena" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdTipoDocumento" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoSangre" Type="Int32" Nullable="false" />
+    <Property Name="IdRol" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" />
+    <NavigationProperty Name="Agendamiento_Campana" Relationship="bloodbog_bdModel.FK__Agendamie__IdUsu__5CD6CB2B" FromRole="Usuario" ToRole="Agendamiento_Campana" />
+    <NavigationProperty Name="Banner" Relationship="bloodbog_bdModel.FK__Banner__IdUsuari__60A75C0F" FromRole="Usuario" ToRole="Banner" />
+    <NavigationProperty Name="Campanas_Donacion" Relationship="bloodbog_bdModel.FK__Campañas___IdUsu__5812160E" FromRole="Usuario" ToRole="Campanas_Donacion" />
+    <NavigationProperty Name="Clinicas_Bancos_Sangre" Relationship="bloodbog_bdModel.FK__Clinicas___IdUsu__48CFD27E" FromRole="Usuario" ToRole="Clinicas_Bancos_Sangre" />
+    <NavigationProperty Name="Clinicas_Bancos_Sangre1" Relationship="bloodbog_bdModel.FK__Clinicas___IdUsu__4CA06362" FromRole="Usuario" ToRole="Clinicas_Bancos_Sangre" />
+    <NavigationProperty Name="Rol" Relationship="bloodbog_bdModel.FK__Usuario__IdRol__6E01572D" FromRole="Usuario" ToRole="Rol" />
+    <NavigationProperty Name="Solicitud_Recoleccion" Relationship="bloodbog_bdModel.FK__Solicitud__IdUsu__52593CB8" FromRole="Usuario" ToRole="Solicitud_Recoleccion" />
+    <NavigationProperty Name="Solicitud_Recoleccion1" Relationship="bloodbog_bdModel.FK__Solicitud__IdUsu__534D60F1" FromRole="Usuario" ToRole="Solicitud_Recoleccion" />
+    <NavigationProperty Name="Tipo_Documento" Relationship="bloodbog_bdModel.FK__Usuario__IdTipoD__3A81B327" FromRole="Usuario" ToRole="Tipo_Documento" />
+    <NavigationProperty Name="Tipo_Sangre" Relationship="bloodbog_bdModel.FK__Usuario__IdTipoS__3B75D760" FromRole="Usuario" ToRole="Tipo_Sangre" />
+  </EntityType>
+  <Association Name="FK__Agendamie__IdCam__5BE2A6F2">
+    <End Type="bloodbog_bdModel.Campanas_Donacion" Role="Campanas_Donacion" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Agendamiento_Campana" Role="Agendamiento_Campana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campanas_Donacion">
+        <PropertyRef Name="IdCampanas_Donacion" />
+      </Principal>
+      <Dependent Role="Agendamiento_Campana">
+        <PropertyRef Name="IdCampana_Donacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Agendamie__IdUsu__5CD6CB2B">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Agendamiento_Campana" Role="Agendamiento_Campana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Agendamiento_Campana">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banner__IdUsuari__60A75C0F">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Banner" Role="Banner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Banner">
+        <PropertyRef Name="IdUsuario_Sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Campañas___IdUsu__5812160E">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Campanas_Donacion" Role="Campanas_Donacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Campanas_Donacion">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clinicas___IdUsu__48CFD27E">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Clinicas_Bancos_Sangre" Role="Clinicas_Bancos_Sangre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Clinicas_Bancos_Sangre">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clinicas___IdUsu__4CA06362">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Clinicas_Bancos_Sangre" Role="Clinicas_Bancos_Sangre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Clinicas_Bancos_Sangre">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Estado_So__IdEst__5070F446">
+    <End Type="bloodbog_bdModel.Estado_Solicitud" Role="Estado_Solicitud" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Estado_Solicitud" Role="Estado_Solicitud1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Solicitud">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Principal>
+      <Dependent Role="Estado_Solicitud1">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__IdEst__5165187F">
+    <End Type="bloodbog_bdModel.Estado_Solicitud" Role="Estado_Solicitud" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Solicitud_Recoleccion" Role="Solicitud_Recoleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Solicitud">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Principal>
+      <Dependent Role="Solicitud_Recoleccion">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menu_Rol__IdMenu__440B1D61">
+    <End Type="bloodbog_bdModel.Menu" Role="Menu" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Menu_Rol" Role="Menu_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="Menu_Rol">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menu_Rol__IdRol__4316F928">
+    <End Type="bloodbog_bdModel.Rol" Role="Rol" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Menu_Rol" Role="Menu_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Menu_Rol">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdRol__6E01572D">
+    <End Type="bloodbog_bdModel.Rol" Role="Rol" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__IdUsu__52593CB8">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Solicitud_Recoleccion" Role="Solicitud_Recoleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Solicitud_Recoleccion">
+        <PropertyRef Name="IdUsuario_Solicita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__IdUsu__534D60F1">
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Solicitud_Recoleccion" Role="Solicitud_Recoleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Solicitud_Recoleccion">
+        <PropertyRef Name="IdUsuario_Recolecta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdTipoD__3A81B327">
+    <End Type="bloodbog_bdModel.Tipo_Documento" Role="Tipo_Documento" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Documento">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdTipoS__3B75D760">
+    <End Type="bloodbog_bdModel.Tipo_Sangre" Role="Tipo_Sangre" Multiplicity="1" />
+    <End Type="bloodbog_bdModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Sangre">
+        <PropertyRef Name="IdTipoSangre" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTipoSangre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

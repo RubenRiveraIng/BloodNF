@@ -1,0 +1,14 @@
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\DAO.dll.config
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\DAO.dll
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\DAO.pdb
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\EntityFramework.dll
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\Model.dll
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\Model.pdb
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\EntityFramework.xml
+C:\Users\danco\source\repos\DAO\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danco\source\repos\DAO\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\danco\source\repos\DAO\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\danco\source\repos\DAO\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\danco\source\repos\DAO\DAO\obj\Debug\DAO.dll
+C:\Users\danco\source\repos\DAO\DAO\obj\Debug\DAO.pdb

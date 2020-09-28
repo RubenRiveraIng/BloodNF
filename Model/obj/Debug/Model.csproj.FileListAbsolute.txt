@@ -1,0 +1,6 @@
+C:\Users\danco\source\repos\DAO\Model\bin\Debug\Model.dll
+C:\Users\danco\source\repos\DAO\Model\bin\Debug\Model.pdb
+C:\Users\danco\source\repos\DAO\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\danco\source\repos\DAO\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\danco\source\repos\DAO\Model\obj\Debug\Model.dll
+C:\Users\danco\source\repos\DAO\Model\obj\Debug\Model.pdb

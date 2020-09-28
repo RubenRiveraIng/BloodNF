@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0fb266f267e8432e9fb7085c9774baa7" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="bloodbog_bdModel.Campanas_Donacion" Width="1.5" PointX="5.25" PointY="20.25" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Tipo_Documento" Width="1.5" PointX="0.75" PointY="14" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Agendamiento_Campana" Width="1.5" PointX="7.875" PointY="21" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Banner" Width="1.5" PointX="5.625" PointY="25.5" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Clinicas_Bancos_Sangre" Width="1.5" PointX="5.625" PointY="28.625" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Estado_Solicitud" Width="1.5" PointX="6.375" PointY="14.125" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Lineas_Atencion" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Menu" Width="1.5" PointX="4.125" PointY="16" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Menu_Rol" Width="1.5" PointX="6.375" PointY="17.125" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Rol" Width="1.5" PointX="1.125" PointY="21.25" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Solicitud_Recoleccion" Width="1.5" PointX="8.625" PointY="16.625" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Tipo_Sangre" Width="1.5" PointX="1.125" PointY="23.875" />
+        <EntityTypeShape EntityType="bloodbog_bdModel.Usuario" Width="1.5" PointX="3.375" PointY="19.375" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Agendamie__IdCam__5BE2A6F2" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Agendamie__IdUsu__5CD6CB2B" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Banner__IdUsuari__60A75C0F" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Campañas___IdUsu__5812160E" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Clinicas___IdUsu__48CFD27E" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Clinicas___IdUsu__4CA06362" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Estado_So__IdEst__5070F446" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Solicitud__IdEst__5165187F" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Menu_Rol__IdMenu__440B1D61" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Menu_Rol__IdRol__4316F928" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Usuario__IdRol__6E01572D" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Solicitud__IdUsu__52593CB8" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Solicitud__IdUsu__534D60F1" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Usuario__IdTipoD__3A81B327" />
+        <AssociationConnector Association="bloodbog_bdModel.FK__Usuario__IdTipoS__3B75D760" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

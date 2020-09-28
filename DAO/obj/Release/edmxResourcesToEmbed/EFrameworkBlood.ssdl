@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bloodbog_bdModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agendamiento_Campana">
+    <Key>
+      <PropertyRef Name="IdAgendamiento" />
+    </Key>
+    <Property Name="IdAgendamiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha_Asistencia" Type="datetime" Nullable="false" />
+    <Property Name="IdCampana_Donacion" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="IdBanner" />
+    </Key>
+    <Property Name="IdBanner" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url_Imagen" Type="varchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="IdUsuario_Sube" Type="int" Nullable="false" />
+    <Property Name="Fecha_Subida" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Hasta" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Campanas_Donacion">
+    <Key>
+      <PropertyRef Name="IdCampanas_Donacion" />
+    </Key>
+    <Property Name="IdCampanas_Donacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="LNG" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LTD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fecha_Inicio" Type="date" />
+    <Property Name="Fecha_Fin" Type="date" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Telefono_1" Type="varchar" MaxLength="20" />
+    <Property Name="Telefono_2" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Clinicas_Bancos_Sangre">
+    <Key>
+      <PropertyRef Name="Idclinicas_Bancos_Sangre" />
+    </Key>
+    <Property Name="Idclinicas_Bancos_Sangre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="LNG" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LTD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono_1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono_2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono_3" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estado_Solicitud">
+    <Key>
+      <PropertyRef Name="IdEstado_Solicitud" />
+    </Key>
+    <Property Name="IdEstado_Solicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lineas_Atencion">
+    <Key>
+      <PropertyRef Name="IdLineas_Atencion" />
+    </Key>
+    <Property Name="IdLineas_Atencion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="Telefono_1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono_2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono_3" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono_4" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono_5" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Icono" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="urlRedirect" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Menu_Rol">
+    <Key>
+      <PropertyRef Name="IdMenu_Rol" />
+    </Key>
+    <Property Name="IdMenu_Rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="IdMenu" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Recoleccion">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+    </Key>
+    <Property Name="IdSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Direccion_Donde" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="LGN_Donde" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LTD_Donde" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdEstado_Solicitud" Type="int" Nullable="false" />
+    <Property Name="IdUsuario_Solicita" Type="int" Nullable="false" />
+    <Property Name="IdUsuario_Recolecta" Type="int" Nullable="false" />
+    <Property Name="Fecha_Recoleccion" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Documento">
+    <Key>
+      <PropertyRef Name="IdTipoDocumento" />
+    </Key>
+    <Property Name="IdTipoDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Sangre">
+    <Key>
+      <PropertyRef Name="IdTipoSangre" />
+    </Key>
+    <Property Name="IdTipoSangre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PrimerApellido" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SegundoApellido" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CorreoElectronico" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Peso" Type="int" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="NumeroDocumento" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="HashContrasena" Type="varchar(max)" Nullable="false" />
+    <Property Name="IdTipoDocumento" Type="int" Nullable="false" />
+    <Property Name="IdTipoSangre" Type="int" Nullable="false" />
+    <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="bit" />
+  </EntityType>
+  <Association Name="FK__Agendamie__IdCam__5BE2A6F2">
+    <End Role="Campanas_Donacion" Type="Self.Campanas_Donacion" Multiplicity="1" />
+    <End Role="Agendamiento_Campana" Type="Self.Agendamiento_Campana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campanas_Donacion">
+        <PropertyRef Name="IdCampanas_Donacion" />
+      </Principal>
+      <Dependent Role="Agendamiento_Campana">
+        <PropertyRef Name="IdCampana_Donacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Agendamie__IdUsu__5CD6CB2B">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Agendamiento_Campana" Type="Self.Agendamiento_Campana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Agendamiento_Campana">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banner__IdUsuari__60A75C0F">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Banner" Type="Self.Banner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Banner">
+        <PropertyRef Name="IdUsuario_Sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Campañas___IdUsu__5812160E">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Campanas_Donacion" Type="Self.Campanas_Donacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Campanas_Donacion">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clinicas___IdUsu__48CFD27E">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Clinicas_Bancos_Sangre" Type="Self.Clinicas_Bancos_Sangre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Clinicas_Bancos_Sangre">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clinicas___IdUsu__4CA06362">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Clinicas_Bancos_Sangre" Type="Self.Clinicas_Bancos_Sangre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Clinicas_Bancos_Sangre">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Estado_So__IdEst__5070F446">
+    <End Role="Estado_Solicitud" Type="Self.Estado_Solicitud" Multiplicity="1" />
+    <End Role="Estado_Solicitud1" Type="Self.Estado_Solicitud" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Solicitud">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Principal>
+      <Dependent Role="Estado_Solicitud1">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menu_Rol__IdMenu__440B1D61">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="Menu_Rol" Type="Self.Menu_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="Menu_Rol">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menu_Rol__IdRol__4316F928">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Menu_Rol" Type="Self.Menu_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Menu_Rol">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__IdEst__5165187F">
+    <End Role="Estado_Solicitud" Type="Self.Estado_Solicitud" Multiplicity="1" />
+    <End Role="Solicitud_Recoleccion" Type="Self.Solicitud_Recoleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Solicitud">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Principal>
+      <Dependent Role="Solicitud_Recoleccion">
+        <PropertyRef Name="IdEstado_Solicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__IdUsu__52593CB8">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Solicitud_Recoleccion" Type="Self.Solicitud_Recoleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Solicitud_Recoleccion">
+        <PropertyRef Name="IdUsuario_Solicita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__IdUsu__534D60F1">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Solicitud_Recoleccion" Type="Self.Solicitud_Recoleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Solicitud_Recoleccion">
+        <PropertyRef Name="IdUsuario_Recolecta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdRol__6E01572D">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdTipoD__3A81B327">
+    <End Role="Tipo_Documento" Type="Self.Tipo_Documento" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Documento">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdTipoS__3B75D760">
+    <End Role="Tipo_Sangre" Type="Self.Tipo_Sangre" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Sangre">
+        <PropertyRef Name="IdTipoSangre" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTipoSangre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bloodbog_bdModelStoreContainer">
+    <EntitySet Name="Agendamiento_Campana" EntityType="Self.Agendamiento_Campana" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Banner" EntityType="Self.Banner" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Campanas_Donacion" EntityType="Self.Campanas_Donacion" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Clinicas_Bancos_Sangre" EntityType="Self.Clinicas_Bancos_Sangre" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Estado_Solicitud" EntityType="Self.Estado_Solicitud" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Lineas_Atencion" EntityType="Self.Lineas_Atencion" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Menu_Rol" EntityType="Self.Menu_Rol" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Solicitud_Recoleccion" EntityType="Self.Solicitud_Recoleccion" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Tipo_Documento" EntityType="Self.Tipo_Documento" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Tipo_Sangre" EntityType="Self.Tipo_Sangre" Schema="bloodbog_admin" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="bloodbog_admin" store:Type="Tables" />
+    <AssociationSet Name="FK__Agendamie__IdCam__5BE2A6F2" Association="Self.FK__Agendamie__IdCam__5BE2A6F2">
+      <End Role="Campanas_Donacion" EntitySet="Campanas_Donacion" />
+      <End Role="Agendamiento_Campana" EntitySet="Agendamiento_Campana" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Agendamie__IdUsu__5CD6CB2B" Association="Self.FK__Agendamie__IdUsu__5CD6CB2B">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Agendamiento_Campana" EntitySet="Agendamiento_Campana" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banner__IdUsuari__60A75C0F" Association="Self.FK__Banner__IdUsuari__60A75C0F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Banner" EntitySet="Banner" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Campañas___IdUsu__5812160E" Association="Self.FK__Campañas___IdUsu__5812160E">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Campanas_Donacion" EntitySet="Campanas_Donacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clinicas___IdUsu__48CFD27E" Association="Self.FK__Clinicas___IdUsu__48CFD27E">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Clinicas_Bancos_Sangre" EntitySet="Clinicas_Bancos_Sangre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clinicas___IdUsu__4CA06362" Association="Self.FK__Clinicas___IdUsu__4CA06362">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Clinicas_Bancos_Sangre" EntitySet="Clinicas_Bancos_Sangre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Estado_So__IdEst__5070F446" Association="Self.FK__Estado_So__IdEst__5070F446">
+      <End Role="Estado_Solicitud" EntitySet="Estado_Solicitud" />
+      <End Role="Estado_Solicitud1" EntitySet="Estado_Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menu_Rol__IdMenu__440B1D61" Association="Self.FK__Menu_Rol__IdMenu__440B1D61">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Menu_Rol" EntitySet="Menu_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menu_Rol__IdRol__4316F928" Association="Self.FK__Menu_Rol__IdRol__4316F928">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Menu_Rol" EntitySet="Menu_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__IdEst__5165187F" Association="Self.FK__Solicitud__IdEst__5165187F">
+      <End Role="Estado_Solicitud" EntitySet="Estado_Solicitud" />
+      <End Role="Solicitud_Recoleccion" EntitySet="Solicitud_Recoleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__IdUsu__52593CB8" Association="Self.FK__Solicitud__IdUsu__52593CB8">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Solicitud_Recoleccion" EntitySet="Solicitud_Recoleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__IdUsu__534D60F1" Association="Self.FK__Solicitud__IdUsu__534D60F1">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Solicitud_Recoleccion" EntitySet="Solicitud_Recoleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdRol__6E01572D" Association="Self.FK__Usuario__IdRol__6E01572D">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdTipoD__3A81B327" Association="Self.FK__Usuario__IdTipoD__3A81B327">
+      <End Role="Tipo_Documento" EntitySet="Tipo_Documento" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdTipoS__3B75D760" Association="Self.FK__Usuario__IdTipoS__3B75D760">
+      <End Role="Tipo_Sangre" EntitySet="Tipo_Sangre" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
